@@ -9,6 +9,7 @@ metadata:
   name: azure-wi-webhook-controller-manager
   namespace: '{{ .Release.Namespace }}'
 spec:
+  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
