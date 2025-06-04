@@ -5,6 +5,8 @@ var replacements = map[string]string{
 
 	`HELMSUBST_DEPLOYMENT_NODE_SELECTOR: ""`: `{{- toYaml .Values.nodeSelector | nindent 8 }}`,
 
+	"HELMSUBST_DEPLOYMENT_REVISION_HISTORY_LIMIT": `{{ .Values.revisionHistoryLimit }}`,
+
 	"HELMSUBST_DEPLOYMENT_REPLICAS": `{{ .Values.replicaCount }}`,
 
 	`HELMSUBST_DEPLOYMENT_AFFINITY: ""`: `{{- toYaml .Values.affinity | nindent 8 }}`,
